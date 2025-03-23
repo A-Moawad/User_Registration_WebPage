@@ -1,0 +1,16 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and cache
+logs/
+cache/
+
+# Ignore uploads and sensitive files
+public/images/
+.env
+config.php
+
+# Ignore dependencies (if using Composer or NPM)
+vendor/
+node_modules/
