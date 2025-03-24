@@ -8,28 +8,28 @@
                     <h4>User Registration</h4>
                 </div>
                 <div class="card-body">
-                    <form id="registrationForm" action="http://localhost/user-registrationPage/register_process.php" method="POST" enctype="multipart/form-data" novalidate>
+                    <form id="registrationForm" action="..\process\register_action.php" method="POST" enctype="multipart/form-data" novalidate>
                         <div class="mb-3">
                             <label class="form-label">Full Name</label>
-                            <input type="text" name="full_name" id="full_name" class="form-control" required>
+                            <input type="text" name="name" id="full_name" class="form-control" required>
                             <div class="invalid-feedback">Full Name must be at least 3 letters and contain only alphabets.</div>
                         </div>
                         
                         <div class="mb-3">
                             <label class="form-label">Username</label>
-                            <input type="text" name="user_name" id="user_name" class="form-control" required>
+                            <input type="text" name="username" id="user_name" class="form-control" required>
                             <div class="invalid-feedback">Username must be at least 4 characters long.</div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Phone Number</label>
-                            <input type="tel" name="phone" id="phone" class="form-control" required>
+                            <input type="tel" name="phone_number" id="phone" class="form-control" required>
                             <div class="invalid-feedback">Enter a valid phone number (10-15 digits).</div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">WhatsApp Number</label>
-                            <input type="tel" name="whatsapp" id="whatsapp" class="form-control" required>
+                            <input type="tel" name="whatsapp_number" id="whatsapp" class="form-control" required>
                             <div class="invalid-feedback">Enter a valid WhatsApp number (10-15 digits).</div>
                         </div>
 
@@ -58,7 +58,7 @@
 
                         <div class="mb-3">
                             <label class="form-label">Upload Profile Picture</label>
-                            <input type="file" name="user_image" id="user_image" class="form-control" accept=".jpg, .jpeg, .png" required>
+                            <input type="file" name="profile_picture" id="user_image" class="form-control" accept=".jpg, .jpeg, .png" required>
                             <div class="invalid-feedback">Only .jpg, .jpeg, .png files are allowed.</div>
                         </div>
 
