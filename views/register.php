@@ -1,5 +1,7 @@
 <?php include 'header.php'; ?>
 
+<link rel="stylesheet" href="styles.css">
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -31,6 +33,11 @@
                             <label class="form-label">WhatsApp Number</label>
                             <input type="tel" name="whatsapp" id="whatsapp" class="form-control" required>
                             <div class="invalid-feedback">Enter a valid WhatsApp number (10-15 digits).</div>
+                            <div class="d-flex mt-2 align-items-center justify-content-between">
+                                <button class="btn btn-success" onclick="validateWhatsAppNumber()">Check Number</button>
+                                <div class="whatsapp-validator"></div>
+                                <div id="whatsapp-validator-spinner" class="spinner-border text-success" role="status" style="display:none"></div>
+                            </div>
                         </div>
 
                         <div class="mb-3">
@@ -159,5 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+
+<script src="../API_Ops.js"></script>
 
 <?php include 'footer.php'; ?>

@@ -1,0 +1,15 @@
+.ValidateWhatsappButton{
+    background: #198754;
+    color: white;
+    border-radius: 10px;
+    text-wrap: nowrap;
+    height: fit-content;
+}
+
+.invalidWhatsapp{
+    color:#dc3545
+}
+
+.validWhatsapp{
+    color:#198754
+}
