@@ -1,6 +1,6 @@
 <?php
-include '../db/connection.php'; // Ensure you have a connection.php file
-
+include '../db/connection.php'; 
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"] ?? '';
     $username = $_POST["username"] ?? '';
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (in_array($imageFileType, ["jpg", "jpeg", "png", "gif"])) {
             if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $target_file)) {
-                $profile_picture = $file_name; // Store only filename in DB
+                $profile_picture = $file_name; 
             }
         }
     }
