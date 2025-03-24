@@ -1,9 +1,10 @@
 <?php
 session_start();
+include 'header.php';
 
-// Check if user data exists in the session
 if (!isset($_SESSION['user'])) {
-    die("No user data found! Please register first.");
+    header("Location: login.php");
+    exit();
 }
 
 $user = $_SESSION['user'];
@@ -38,15 +39,20 @@ $user = $_SESSION['user'];
 <body>
 
 <div class="profile-container">
-    <h2>Welcome, <?php echo htmlspecialchars($user['full_name']); ?>!</h2>
-    <img src="<?php echo htmlspecialchars($user['profile_image']); ?>" class="profile-img" alt="Profile Image">
-    <p><strong>Username:</strong> <?php echo htmlspecialchars($user['user_name']); ?></p>
+    <h2>Welcome, <?php echo htmlspecialchars($user['name']); ?>!</h2>
+<img src="../uploads/<?php echo htmlspecialchars($user['profile_picture']); ?>" 
+     class="img-thumbnail rounded-circle border border-primary shadow-lg" 
+     style="width: 150px; height: 150px; object-fit: cover;" 
+     alt="Profile Image">
+
+    <p><strong>Username:</strong> <?php echo htmlspecialchars($user['username']); ?></p>
     <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
-    <p><strong>Phone:</strong> <?php echo htmlspecialchars($user['phone']); ?></p>
-    <p><strong>WhatsApp:</strong> <?php echo htmlspecialchars($user['whatsapp']); ?></p>
+    <p><strong>Phone:</strong> <?php echo htmlspecialchars($user['phone_number']); ?></p>
+    <p><strong>WhatsApp:</strong> <?php echo htmlspecialchars($user['whatsapp_number']); ?></p>
     <p><strong>Address:</strong> <?php echo htmlspecialchars($user['address']); ?></p>
     <a href="../index.php" class="btn btn-primary">Go to Home</a>
 </div>
 
 </body>
 </html>
+<?php include 'footer.php'; ?>
