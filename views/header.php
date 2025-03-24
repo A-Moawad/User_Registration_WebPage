@@ -15,8 +15,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="views/register.php">Register</a></li>
-          <li class="nav-item"><a class="nav-link" href="views/userProfile.php">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+          <li class="nav-item"><a class="nav-link" href="userProfile.php">Profile</a></li>
         </ul>
       </div>
     </div>
