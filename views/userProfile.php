@@ -50,7 +50,7 @@ $user = $_SESSION['user'];
     <p><strong>Phone:</strong> <?php echo htmlspecialchars($user['phone_number']); ?></p>
     <p><strong>WhatsApp:</strong> <?php echo htmlspecialchars($user['whatsapp_number']); ?></p>
     <p><strong>Address:</strong> <?php echo htmlspecialchars($user['address']); ?></p>
-    <a href="../index.php" class="btn btn-primary">Go to Home</a>
+    <a href="./home.php" class="btn btn-primary">Go to Home</a>
 </div>
 
 </body>

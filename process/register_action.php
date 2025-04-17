@@ -33,7 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$name','$username', '$phone_number', '$whatsapp_number', '$address','$email', '$password', '$profile_picture')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Registration successful!";
+        echo "<script>
+                alert('Registration successful!');
+                window.location.href = '../views/home.php'; // change this path if needed
+            </script>";
     } else {
         echo "Error: " . mysqli_error($conn);
     }

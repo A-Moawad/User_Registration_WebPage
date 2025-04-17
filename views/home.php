@@ -31,7 +31,7 @@
 <body>
 
   <!-- Header -->
-  <?php include 'views/header.php'; ?>
+  <?php include './header.php'; ?>
 
 
   <!-- Flex container to push footer down -->
@@ -41,7 +41,7 @@
     <div class="hero">
       <h1>Welcome to User Registration</h1>
       <p>Register now and create your profile with ease.</p>
-      <a href="views/register.php" class="btn btn-light btn-lg">Get Started</a>
+      <a href="./register.php" class="btn btn-light btn-lg">Get Started</a>
     </div>
     
     <!-- Features Section -->

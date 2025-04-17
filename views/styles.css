@@ -13,3 +13,7 @@
 .validWhatsapp{
     color:#198754
 }
+#submit:disabled{
+    background-color: red;
+    opacity: 0.5;
+}
