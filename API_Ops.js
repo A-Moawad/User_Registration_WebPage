@@ -5,9 +5,8 @@ async function validateWhatsAppNumber () {
       return;
   }
 
-  const apiUrl = `https://whatsapp-number-validator3.p.rapidapi.com/WhatsappNumberHasItWithToken`;
-  const apiKey = "0a505ffe1cmsh1e63e8833d2e129p1a86b6jsnb5a983037da4"
-
+  const apiUrl = `https://whatsapp-number-validator3.p.rapidapi.com/WhatsappNumberHasItBulkWithToken`;
+  const apiKey = "b1c5fb2215mshc95252a41bd7a28p118b42jsn14334a0a56e3"
   const options = {
     method: 'POST',
     headers: {
@@ -15,23 +14,22 @@ async function validateWhatsAppNumber () {
       'x-rapidapi-host': 'whatsapp-number-validator3.p.rapidapi.com',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ phone_number: "20" + number }) 
+    body: JSON.stringify({ phone_numbers: ["20" + number] }) 
   };
 
   const spinner = document.getElementById("whatsapp-validator-spinner")
   const whatsapp = document.querySelector(".whatsapp-validator")
 
- try {
+  try {
    spinner.style.display = "block"
-   whatsapp.classList.remove(["validWhatsapp","InvalidWhatsapp"])
+   whatsapp.classList.remove(["validWhatsapp","invalidWhatsapp"])
    whatsapp.innerText = ""
 
   const response = await fetch(apiUrl, options);
 	const result = await response.text();
   const parsedResult = JSON.parse(result)
   
-  spinner.style.display = "none"
-  if(parsedResult.status > 5){
+  if(parsedResult?.[0].status === "valid"){
     whatsapp.classList.add("validWhatsapp")
     whatsapp.innerText= '✅ Valid WhatsApp number!'
   }
@@ -39,6 +37,7 @@ async function validateWhatsAppNumber () {
     whatsapp.classList.add("invalidWhatsapp")
     whatsapp.innerText= '❌ Invalid WhatsApp number.'
   }
+  spinner.style.display = "none"
 } catch (error) {
 	console.error(error);
 }
