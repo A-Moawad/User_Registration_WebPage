@@ -35,7 +35,7 @@
                             <input type="tel" name="whatsapp_number" id="whatsapp" class="form-control" required>
                             <div class="invalid-feedback">Enter a valid WhatsApp number (10-15 digits).</div>
                             <div class="d-flex mt-2 align-items-center justify-content-between">
-                                <button class="btn btn-success" onclick="validateWhatsAppNumber()">Check Number</button>
+                                <button class="btn btn-success" type="button" onclick="validateWhatsAppNumber()">Check Number</button>
                                 <div class="whatsapp-validator"></div>
                                 <div id="whatsapp-validator-spinner" class="spinner-border text-success" role="status" style="display:none"></div>
                             </div>
